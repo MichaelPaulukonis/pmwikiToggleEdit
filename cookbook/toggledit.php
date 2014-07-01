@@ -1,3 +1,5 @@
+<?php if (!defined('PmWiki')) exit();
+
 /*
 
 The MIT License (MIT)
@@ -24,13 +26,10 @@ THE SOFTWARE.
 
 */
 
-<?php if (!defined('PmWiki')) exit();
-
 $RecipeInfo['ToggleEdit']['Version'] = '2014-07-01';
 
 $GUIButtons['toggle'] = array(90, '', '', '',
-   '<a href="#" onclick="pmAddToggle();"><img src="$GUIButtonDirUrlFmt/toggle.gif" title="$[toggle]" /></a>');
-)
+   '<a href=\"#\" onclick=\"pmAddToggle();\"><img src=\"$GUIButtonDirUrlFmt/toggle.gif\" title=\"$[toggle]\" /></a>');
 
 $HTMLFooterFmt['toggle'] = '<script type="text/javascript"
    src="$FarmPubDirUrl/pm-toggle-edit.js"></script>';
