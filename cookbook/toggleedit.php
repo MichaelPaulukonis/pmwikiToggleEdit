@@ -26,10 +26,14 @@ THE SOFTWARE.
 
 */
 
-$RecipeInfo['ToggleEdit']['Version'] = '2014-07-01';
+$RecipeInfo['ToggleEdit']['Version'] = '2014-08-21';
 
-$GUIButtons['toggle'] = array(90, '', '', '',
-   '<a href=\"#\" onclick=\"pmAddToggle();\"><img src=\"$GUIButtonDirUrlFmt/toggle.gif\" title=\"$[toggle]\" /></a>');
+global $toggleEditStyle, $toggleEditClass;
 
-$HTMLFooterFmt['toggle'] = '<script type="text/javascript"
-   src="$FarmPubDirUrl/pm-toggle-edit.js"></script>';
+SDV($toggleEditStyle, 'border:1px solid #999; padding:5px;' );
+SDV($toggleEditClass, 'toggleedit');
+
+$GUIButtons['toggleedit'] = array(90, '', '', '',
+   '<a href=\"#\" onclick=\"pmAddToggle(\'$toggleEditStyle\', \'$toggleEditClass\');\"><img src=\"$GUIButtonDirUrlFmt/toggle.gif\" title=\"$[toggle]\" /></a>');
+
+$HTMLFooterFmt['toggleedit'] = '<script type="text/javascript" src="$FarmPubDirUrl/pm-toggle-edit.js"></script>';
